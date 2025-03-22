@@ -3,12 +3,12 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Sobrescribe la clase bg-primary en la navbar para que sea rojo */
-.navbar.bg-primary {
-  background-color: #dc3545 !important; /* Rojo Bootstrap (danger) */
+/* Clase custom-nav para la barra de navegación, fondo rojo */
+.custom-nav {
+  background-color: #dc3545 !important; /* Rojo deseado */
 }
 
-/* Los enlaces de la navbar se mantienen en blanco */
+/* Los enlaces en la navbar se mantienen en blanco */
 .navbar-brand,
 .navbar-nav .nav-link {
   color: #ffffff !important;
@@ -39,4 +39,5 @@ form {
   background-color: #c82333 !important;
   border-color: #bd2130 !important;
 }
+
 
