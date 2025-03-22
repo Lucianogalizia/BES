@@ -335,6 +335,7 @@ def flujo_d_cantidades():
         combos = selected_values  # Cada valor seleccionado se usará para ingresar cantidad
         return render_template("flujo_d_cantidades.html", combos=combos, col=col)
 
+
 # ===================================
 # FLUJO E: Baja BES
 # ===================================
@@ -344,10 +345,10 @@ def flujo_e():
 
 @app.route("/flujo_e/decidir", methods=["POST"])
 def flujo_e_decidir():
-    baja_varilla = request.form.get("baja_BES")
-    if baja_varilla == "NO":
+    baja_bes = request.form.get("baja_BES")
+    if baja_bes == "NO":
         return redirect(url_for("flujo_f"))
-    elif baja_varilla == "SI":
+    elif baja_bes == "SI":
         return redirect(url_for("flujo_h"))
     else:
         return "Selecciona una opción.", 400
