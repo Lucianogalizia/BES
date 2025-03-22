@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Flujo F: Configuración de Filtros{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <h1 class="text-center mb-4">Flujo F: Configuración de Filtros</h1>
+    <form method="POST">
+      <div class="mb-3">
+        <label class="form-label">Selecciona DIÁMETRO:</label>
+        <select name="diametros" multiple class="form-select" size="6">
+          {% for diam in opciones_diam %}
+            <option value="{{ diam }}">{{ diam }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Selecciona DIÁMETRO CSG:</label>
+        <select name="diacsg" class="form-select" required>
+          {% for csg in opciones_diacsg %}
+            <option value="{{ csg }}">{{ csg }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Confirmar Filtros</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+
+

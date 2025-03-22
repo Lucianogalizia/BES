@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Flujo D: Selección de Valores{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <h1 class="text-center mb-4">Flujo D: Selección de Valores para la columna "{{ col }}"</h1>
+    <form method="POST">
+      <div class="mb-3">
+        <p>Selecciona uno o más valores:</p>
+        <select name="valores" multiple class="form-select" size="5">
+          {% for val in unique_values %}
+            <option value="{{ val }}">{{ val }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Confirmar Selección</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Flujo H: Ingreso de Cantidades{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <h1 class="text-center mb-4">Flujo H: Ingreso de Cantidades para Materiales</h1>
+    <form action="{{ url_for('flujo_h_cantidades', materiales=",".join(materiales)) }}" method="POST">
+      {% for mat in materiales %}
+        <div class="mb-3">
+          <label for="qty_{{ mat }}" class="form-label">{{ mat }}:</label>
+          <input type="number" step="0.01" name="qty_{{ mat }}" id="qty_{{ mat }}" class="form-control" required>
+        </div>
+      {% endfor %}
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Guardar cantidades</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+
+
+

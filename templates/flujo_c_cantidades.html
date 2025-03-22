@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Flujo C: Ingreso de Cantidades{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <h1 class="text-center mb-4">Flujo C: Ingreso de Cantidades</h1>
+    <form method="POST">
+      {% for diam, tipo in combos %}
+        <div class="mb-3">
+          <label class="form-label">{{ diam }} - {{ tipo }}:</label>
+          <input type="number" name="qty_{{ diam }}_{{ tipo }}" step="any" class="form-control" required>
+        </div>
+      {% endfor %}
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Aplicar Cantidades y Continuar</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+

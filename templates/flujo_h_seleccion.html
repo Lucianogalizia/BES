@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Flujo H: Selección de Materiales{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <h1 class="text-center mb-4">Flujo H: Selección de Materiales</h1>
+    <p>Lista completa de materiales:</p>
+    <!-- Se muestra la tabla completa para consulta -->
+    {{ df_html | safe }}
+    <p class="mt-4">Seleccione los materiales que desea agregar:</p>
+    <form method="POST" action="{{ url_for('flujo_h_seleccion') }}">
+      <div class="mb-3">
+        <select name="materiales" multiple class="form-select" size="10">
+          {% for mat in materiales %}
+            <option value="{{ mat }}">{{ mat }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Aplicar selección</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+
+

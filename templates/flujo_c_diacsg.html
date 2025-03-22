@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Flujo C: Selección de DIÁMETRO CSG{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <h1 class="text-center mb-4">Flujo C: Selección de DIÁMETRO CSG</h1>
+    <form method="POST">
+      <div class="mb-3">
+        <p>Selecciona DIÁMETRO CSG:</p>
+        <select name="diacsg" class="form-select" required>
+          {% for csg in unique_csg %}
+            <option value="{{ csg }}">{{ csg }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Continuar</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+

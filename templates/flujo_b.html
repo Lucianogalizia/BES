@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Flujo B: Saca Tubing{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <h1 class="text-center mb-4">Flujo B: Tubo de saca</h1>
+    <form method="POST">
+      <div class="mb-3">
+        <label class="form-label">¿Saca Tubing?</label>
+        <select name="saca_tubing" class="form-select" required>
+          <option value="">Seleccione opción</option>
+          <option value="SI">SI</option>
+          <option value="NO">NO</option>
+        </select>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Continuar</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+

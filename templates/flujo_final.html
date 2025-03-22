@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Flujo Final: Materiales Consolidados{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1 class="text-center mb-4">Flujo Final: Materiales Consolidados</h1>
+  {% for flow, df in materiales_finales %}
+    <h2>{{ flow }}</h2>
+    <div class="table-responsive">
+      {{ df.to_html(classes="table table-bordered", index=False) | safe }}
+    </div>
+  {% endfor %}
+  <div class="text-center mt-4">
+    <a href="{{ url_for('export_excel') }}" class="btn btn-success">Exportar a Excel</a>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
