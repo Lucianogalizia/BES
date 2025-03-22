@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
-{% block title %}Flujo E: Baja Varilla{% endblock %}
+{% block title %}Flujo E: Baja BES{% endblock %}
 
 {% block content %}
 <div class="row justify-content-center">
   <div class="col-md-8">
-    <h1 class="text-center mb-4">Flujo E: Baja Varilla</h1>
+    <h1 class="text-center mb-4">Flujo E: Baja BES</h1>
     <form action="{{ url_for('flujo_e_decidir') }}" method="POST">
       <div class="mb-3">
-        <label class="form-label">¿Baja Varilla?</label>
-        <select name="baja_varilla" class="form-select" required>
+        <label class="form-label">¿Baja BES?</label>
+        <select name="baja_BES" class="form-select" required>
           <option value="">Seleccione opción</option>
           <option value="SI">SI</option>
           <option value="NO">NO</option>
@@ -22,6 +22,7 @@
   </div>
 </div>
 {% endblock %}
+
 
 
 
