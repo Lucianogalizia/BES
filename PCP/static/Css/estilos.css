@@ -1,14 +1,17 @@
+/* ---------- estilos.css ---------- */
+
+/* Fondo principal y tipografía */
 body {
   background-color: #f8f9fa; /* Gris muy claro */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Clase custom-nav para la barra de navegación, fondo rojo */
+/* Barra de navegación con fondo rojo */
 .custom-nav {
-  background-color: #dc3545 !important; /* Rojo deseado */
+  background-color: #dc3545 !important; /* Rojo */
 }
 
-/* Los enlaces en la navbar se mantienen en blanco */
+/* Enlaces de la navbar en blanco */
 .navbar-brand,
 .navbar-nav .nav-link {
   color: #ffffff !important;
@@ -20,7 +23,7 @@ footer {
   color: #333;
 }
 
-/* Estilos para formularios: fondo blanco con sombra ligera */
+/* Formularios con fondo blanco y sombra ligera */
 form {
   background-color: #ffffff;
   padding: 20px;
@@ -39,5 +42,6 @@ form {
   background-color: #c82333 !important;
   border-color: #bd2130 !important;
 }
+
 
 
